@@ -1,0 +1,12 @@
+<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+
+
+<a-scene>
+<a-torus-knot color="#B84A39" arc="80" p="2" q="7" radius="5" radius-tubular="0.2"></a-torus-knot>
+  
+  <a-sphere position="0 -1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+
+   <a-sphere position="0 3 -5" radius="1.25" color="#7B7CAE"></a-sphere>
+  
+  <a-sky color="#ECECEC"></a-sky>
+</a-scene>
