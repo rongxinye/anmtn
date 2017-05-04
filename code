@@ -21,8 +21,5 @@
  to="360 360 360"
  repeat="indefinite">
   </a-entity>
-  <a-assets>
- <img id="bg" src="https://newevolutiondesigns.com/images/freebies/galaxy-wallpaper-11.jpg">
- </a-assets>
- <a-sky src="#bg"></a-sky>
+
 </a-scene>
