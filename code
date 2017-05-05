@@ -15,6 +15,7 @@
                 material="color: cyan; shader: flat"
                 cursor="maxDistance: 30; fuse: true">
        </a-animation>
+
       </a-entity>
     </a-entity>
   </a-entity>
@@ -24,7 +25,6 @@
   <a-entity position="0 1 0">
     <a-entity mixin="cube green">
       <a-animation begin="click"
-                  
                    attribute="rotation" to="0 360 0"
                    easing="linear" dur="2000" fill="backwards"
                   
@@ -51,11 +51,10 @@
 </a-entity>
 
              <a-entity>
-  <a-sphere position="0 4 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-    <a-animation  attribute="rotation" 
- dur="13000"
- to="180 100 180"
- repeat="indefinite">
+  <a-sphere position="0 4 -5" radius="1.25" color="#E68D5E"></a-sphere>
+     <a-animation begin="click" fill="forwards" repeat="1"
+                   direction="alternate" attribute="position" from="0 0 0"
+                   to="0 15 0" dur="2000"></a-animation>
 </a-entity>
 
 </a-scene>
