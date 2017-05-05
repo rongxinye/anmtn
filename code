@@ -1,25 +1,61 @@
-<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-
-
 <a-scene>
-  <a-entity>
-<a-torus-knot color="#B84A39" arc="80" p="2" q="7" radius="5" radius-tubular="0.2"></a-torus-knot>
-  </a-entity>
+  <a-assets>
+    <a-mixin id="cube" geometry="primitive: box"></a-mixin>
+    <a-mixin id="cube-hovered" material="color: magenta"></a-mixin>
+    <a-mixin id="cube-selected" material="color: cyan"></a-mixin>
+    <a-mixin id="green" material="color: green"></a-mixin>
+   
+  </a-assets>
   
-  <a-entity>
-  <a-sphere position="0 -1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-    <a-animation attribute="rotation"
- dur="10000"
- to="360 360 360"
- repeat="indefinite">
+  <a-entity position="0 2.2 4">
+    <a-entity camera look-controls wasd-controls>
+      <a-entity position="0 0 -3"
+                geometry="primitive: ring; radiusOuter: 0.30;
+                          radiusInner: 0.20;"
+                material="color: cyan; shader: flat"
+                cursor="maxDistance: 30; fuse: true">
+       </a-animation>
+      </a-entity>
     </a-entity>
-  
-<a-entity>
-  <a-box position="0 2 -3" color="tomato" />
-<a-animation attribute="rotation"
- dur="10000"
- to="360 360 360"
- repeat="indefinite">
   </a-entity>
+  
+ 
+
+  <a-entity position="0 1 0">
+    <a-entity mixin="cube green">
+      <a-animation begin="click"
+                  
+                   attribute="rotation" to="0 360 0"
+                   easing="linear" dur="2000" fill="backwards"
+                  
+        
+                   </a-animation>
+    </a-entity>
+  </a-entity>
+
+  
+   <a-entity>
+  <a-sphere position="5 -1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+    <a-animation  attribute="rotation" 
+ dur="8000"
+ to="160 160 160"
+ repeat="indefinite">
+</a-entity>
+     
+        <a-entity>
+  <a-sphere position="-5 -1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+    <a-animation  attribute="rotation" 
+ dur="10000"
+ to="100 100 100"
+ repeat="indefinite">
+</a-entity>
+
+             <a-entity>
+  <a-sphere position="0 4 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+    <a-animation  attribute="rotation" 
+ dur="13000"
+ to="180 100 180"
+ repeat="indefinite">
+</a-entity>
 
 </a-scene>
